@@ -1346,6 +1346,8 @@ library(posterior)
 
 post <- as_draws_df(brms_g)
 
+save(post, brms_g, file = "brm_ME2_ME6_fit_posts.RData")
+
 # N group (reference level)
 me2_N_cols <- grep(
   "^r_animal__ME2\\[.*,Intercept\\]$",
